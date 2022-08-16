@@ -64,13 +64,13 @@ const zooAnimals = [
   */
 
   function animalNames(arr){
-    let displayNames = []
+    const displayNames = []
     arr.forEach((val) => {
       displayNames.unshift(`name: ${val.animal_name}, scientific: ${val.scientific_name}`)
     })
     return displayNames
   }
-  console.log(animalNames(zooAnimals))
+  //console.log(animalNames(zooAnimals))
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -83,10 +83,13 @@ const zooAnimals = [
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(arr){
+    const lowers = arr.map((item) => {
+      return item.animal_name.toLowerCase()
+    })
+    return lowers
   }
-  
+  console.log(lowerCaseNames(zooAnimals))
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
